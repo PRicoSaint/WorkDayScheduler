@@ -15,7 +15,7 @@ var savebtn = $('#savebuttons');
 
 var currentDate = moment().format("dddd, MMMM Do YYYY");
 
-now.text('Today is ' + currentDate);
+nowDate.text('Today is ' + currentDate);
 
 var nowTime = moment().format("HH");
 

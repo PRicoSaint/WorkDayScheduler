@@ -14,40 +14,49 @@ var sixT = $('#6pm');
 var savebtn = $('#savebuttons');
 
 var currentDate = moment().format("dddd, MMMM Do YYYY");
+var currentHour = moment().format("h");
+console.log(currentHour);
+
 
 nowDate.text('Today is ' + currentDate);
 
 var nowTime = moment().format("HH");
+console.log(nowTime);
 
 
-// TODO: Stole code from previous previous week - to do list. Need to convert it to JQUERY and get attribute to save it to local console.
-
-for (var i = 0; i < 10; i++) {
-    var todo = todos[i];
-    li.setAttribute("data-index", i);
-
-
-    li.appendChild(button);
-    todoList.appendChild(li);
-  }
+// This section is for the load from console.
+//
+// for (var i = 0; i < 10; i++) {
+  //   var todo = todos[i];
+  //   li.setAttribute("data-index", i);
 
 
-
-  savebtn.addEventListener("click", function(event) {
-    var element = event.target;
-    event.preventDefault();
-    // Checks if element is a button
-    if (element.matches("button") === true) {
-      // Get its data-index value and remove the todo element from the list
-    var row = element.parentElement.getAttribute("data-index");
-    var event =   
-    localStorage.setItem("todos", JSON.stringify(todos));
-
-     
-    }
-  });
+  //   li.appendChild(button);
+  //   todoList.appendChild(li);
+  // } 
 
 
 
 
 
+
+
+
+
+
+//  Save using JQUERY
+savebtn.on('click', function(){
+
+  $('input[type="text"]').each(function(){    
+      var id = $(this).attr('id');
+      var value = $(this).val();
+     localStorage.setItem(id, value);
+
+  });   
+});
+
+
+// This section will be to check timeblocks and change their color depending on what current time it is with respect to the timeblock.
+// Current = orange
+// Past = grey
+// upcoming = green

@@ -1,48 +1,29 @@
 
 var nowDate = $('#currentDay');
-// var nowTime =
-var nineT = $('#9am');
-var tenT = $('#10am');
-var elevenT = $('#11am');
-var twelveT = $('#12pm');
-var oneT = $('#1pm');
-var twoT = $('#2pm');
-var threeT = $('#3pm');
-var fourT = $('#4pm');
-var fiveT = $('#5pm');
-var sixT = $('#6pm');
 var savebtn = $('#savebuttons');
 
 var currentDate = moment().format("dddd, MMMM Do YYYY");
 var currentHour = moment().format("h");
-console.log(currentHour);
+console.log('This is the time in 12h format: ' + currentHour);
 
 
 nowDate.text('Today is ' + currentDate);
 
 var nowTime = moment().format("HH");
-console.log(nowTime);
+console.log('This is the time in 24h format: ' + nowTime);
 
 
 // This section is for the load from console.
-//
-// for (var i = 0; i < 10; i++) {
-  //   var todo = todos[i];
-  //   li.setAttribute("data-index", i);
+function loadEvents(){
+  $('input').each(function(){
+    var id = $(this).attr('id');
+    var event = localStorage.getItem(id);
+    $(this).val(event);
+  });
+    
+};
 
-
-  //   li.appendChild(button);
-  //   todoList.appendChild(li);
-  // } 
-
-
-
-
-
-
-
-
-
+loadEvents();
 
 //  Save using JQUERY
 savebtn.on('click', function(){
@@ -57,6 +38,22 @@ savebtn.on('click', function(){
 
 
 // This section will be to check timeblocks and change their color depending on what current time it is with respect to the timeblock.
-// Current = orange
+// Current = red
 // Past = grey
 // upcoming = green
+console.log(9 > 21);
+function checkEvents(){
+$('input').each(function(){
+  var id = $(this).attr('id');
+  var integer = parseInt(id);
+  console.log('This is the current time block: ' + integer);
+  if (integer === nowTime){
+    $(this).addClass('present');
+  }else if (integer > nowTime){
+    $(this).addClass('future');
+  }else if (integer < nowTime){
+    $(this).addClass('past');
+  }
+});
+}
+checkEvents();

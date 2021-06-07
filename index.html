@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
-
+<!-- form-control description description -->
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
@@ -30,94 +30,94 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container" id = "savebuttons">
-      <!-- Timeblocks go here -->
+      <!-- Timeblocks denoting time from 9am all the way to 6pm -->
       <table class="table table-bordered">
         <tbody>
           <tr>
-            <th scope="row">9am</th>
+            <th scope="row" class ="hour">9AM</th>
             <td>
-            <div class="input-group mb-3">
-              <input id='9am' data-index = "1" type="text" class="form-control" placeholder="" aria-label="Recipient's username" data aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+            <div class="input-group mb-3 time-block">
+              <input id='9' type="text" class="form-control description" placeholder="" data aria-describedby="button-addon2">
+              <button class="saveBtn" type="button" id="button-addon2">💾</button>
             </div>
             </td>
           </tr>
           <tr>
-            <th scope="row">10am</th>
+            <th scope="row" class ="hour">10AM</th>
             <td>
-              <div class="input-group mb-3">
-                <input id='10am' data-index = "2" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+              <div class="input-group mb-3 time-block">
+                <input id='10' data-index = "2" type="text" class="form-control description" placeholder="" aria-describedby="button-addon2">
+                <button class="saveBtn" type="button" id="button-addon2">💾</button>
               </div>
             </td>
           </tr>
           <tr>
-            <th scope="row">11am</th>
+            <th scope="row" class ="hour">11AM</th>
             <td >
-              <div class="input-group mb-3">
-                <input id='11am' data-index = "3" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+              <div class="input-group mb-3 time-block">
+                <input id='11' data-index = "3" type="text" class="form-control description" placeholder="" aria-describedby="button-addon2">
+                <button class="saveBtn" type="button" id="button-addon2">💾</button>
               </div>
             </td>
           </tr>
           <tr>
-            <th scope="row">12pm</th>
+            <th scope="row" class ="hour">12PM</th>
             <td>
-              <div class="input-group mb-3">
-                <input id='12pm' data-index = "4" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+              <div class="input-group mb-3 time-block">
+                <input id='12' data-index = "4" type="text" class="form-control description" placeholder="" aria-describedby="button-addon2">
+                <button class="saveBtn" type="button" id="button-addon2">💾</button>
               </div>
             </td>
           </tr>
           <tr>
-            <th scope="row">1pm</th>
+            <th scope="row" class ="hour">1PM</th>
             <td>
-              <div class="input-group mb-3">
-                <input id='1pm' data-index = "5" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+              <div class="input-group mb-3 time-block">
+                <input id='13' data-index = "5" type="text" class="form-control description" placeholder="" aria-describedby="button-addon2">
+                <button class="saveBtn" type="button" id="button-addon2">💾</button>
               </div>
             </td>
           </tr>
           <tr>
-            <th scope="row">2pm</th>
+            <th scope="row" class ="hour">2PM</th>
             <td >
-              <div class="input-group mb-3">
-                <input id='2pm' data-index = "6" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+              <div class="input-group mb-3 time-block">
+                <input id='14' data-index = "6" type="text" class="form-control description" placeholder="" aria-describedby="button-addon2">
+                <button class="saveBtn" type="button" id="button-addon2">💾</button>
               </div>
             </td>
           </tr>
           <tr>
-            <th scope="row">3pm</th>
+            <th scope="row" class ="hour">3PM</th>
             <td>
-              <div class="input-group mb-3">
-                <input id='3pm' data-index = "7" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+              <div class="input-group mb-3 time-block">
+                <input id='15' data-index = "7" type="text" class="form-control description" placeholder="" aria-describedby="button-addon2">
+                <button class="saveBtn" type="button" id="button-addon2">💾</button>
               </div>
             </td>
           </tr>
           <tr>
-            <th scope="row">4pm</th>
-            <td> <div class="input-group mb-3">
-              <input id='4pm' data-index = "8" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+            <th scope="row" class ="hour">4PM</th>
+            <td> <div class="input-group mb-3 time-block">
+              <input id='16' data-index = "8" type="text" class="form-control description" placeholder="" aria-describedby="button-addon2">
+              <button class="saveBtn" type="button" id="button-addon2">💾</button>
             </div></td>
           </tr>
           <tr>
-            <th scope="row">5pm</th>
+            <th scope="row" class ="hour">5PM</th>
             <td >
-              <div class="input-group mb-3">
-                <input id='5pm' data-index = "9" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+              <div class="input-group mb-3 time-block">
+                <input id='17' data-index = "9" type="text" class="form-control description" placeholder="" aria-describedby="button-addon2">
+                <button class="saveBtn" type="button" id="button-addon2">💾</button>
               </div>
             </td>
           </tr>
           <tr>
-            <th scope="row">6pm</th>
+            <th scope="row" class ="hour">6PM</th>
             <td>
-              <div class="input-group mb-3">
-                <input id='6pm' data-index = "10" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">💾</button>
+              <div class="input-group mb-3 time-block">
+                <input id='18' data-index = "10" type="text" class="form-control description" placeholder="" aria-describedby="button-addon2">
+                <button class="saveBtn" type="button" id="button-addon2">💾</button>
               </div>
             </td>
           </tr>

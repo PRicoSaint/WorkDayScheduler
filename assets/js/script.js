@@ -1,17 +1,11 @@
-
+// This script is describes the functionality of the Work Day scheduler app.
+// This section is for defining variables.
 var nowDate = $('#currentDay');
 var savebtn = $('#savebuttons');
-
 var currentDate = moment().format("dddd, MMMM Do YYYY");
-var currentHour = moment().format("h");
-console.log('This is the time in 12h format: ' + currentHour);
-
-
-nowDate.text('Today is ' + currentDate);
-
 var nowTime = moment().format("HH");
 console.log('This is the time in 24h format: ' + nowTime);
-
+nowDate.text('Today is ' + currentDate);
 
 // This section is for the load from console.
 function loadEvents(){
@@ -19,13 +13,10 @@ function loadEvents(){
     var id = $(this).attr('id');
     var event = localStorage.getItem(id);
     $(this).val(event);
-  });
-    
+  });    
 };
 
-loadEvents();
-
-//  Save using JQUERY
+//  Save using JQUERY .each method
 savebtn.on('click', function(){
 
   $('input[type="text"]').each(function(){    
@@ -35,12 +26,10 @@ savebtn.on('click', function(){
 
   });   
 });
-
-
 // This section will be to check timeblocks and change their color depending on what current time it is with respect to the timeblock.
-// Current = red
+// Present = red
 // Past = grey
-// upcoming = green
+// Future = green
 console.log(9 > 21);
 function checkEvents(){
 $('input').each(function(){
@@ -56,4 +45,7 @@ $('input').each(function(){
   }
 });
 }
+// This initiates functions for loading of variables from storage.
+// It also initiates the checking of each timeblock and comparing it to the current time. It sets the color accordingly. Web app most be reloaded for colors to change according to the time.
+loadEvents();
 checkEvents();

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This is a web app for a Workday scheduler. It is currently set up to be from 9am to 6pm. This can be expanded or shortened depending on user needs. -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,11 +19,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
-<!-- form-control description description -->
+<!-- The 1st section is for the title on the web page. Explains what this app is for. -->
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
@@ -124,10 +124,9 @@
         </tbody>
       </table>
     </div>
-
+<!-- JQUERY library is used, along with moment. A seperate script is added to better manipulate the functionality and tie moment and JQUERY elements together. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

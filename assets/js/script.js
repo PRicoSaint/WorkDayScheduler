@@ -30,14 +30,16 @@ savebtn.on('click', function(){
 // Present = red
 // Past = grey
 // Future = green
-console.log(9 > 21);
+console.log(12 === 12);
 function checkEvents(){
 $('input').each(function(){
   var id = $(this).attr('id');
   var integer = parseInt(id);
   console.log('This is the current time block: ' + integer);
-  if (integer === nowTime){
+  console.log(integer === nowTime);
+  if (integer == nowTime){
     $(this).addClass('present');
+    console.log('this is present');
   }else if (integer > nowTime){
     $(this).addClass('future');
   }else if (integer < nowTime){
